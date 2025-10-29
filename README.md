@@ -1,6 +1,8 @@
 # events app
 this is a event booking app for my rental properties. 
 
+created a events database with three collections which are events,partners,payments.
+
 The data folder has been seperated by 3 files partners,events, and payments.
 
 a public folder was created with a style css file within it wich has been linked to the index.js folder

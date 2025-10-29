@@ -1,5 +1,6 @@
 import express, { json } from "express";
 import events from "../data/events.js";
+import db from "../db/conn.js";
 const router = express.Router();
 
 router
