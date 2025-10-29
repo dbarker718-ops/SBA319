@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <form method = "post" action="/api/listings">
+      <label for="description"
+        >description
+        <input type="text" name="description" id="description" />
+      </label>
+      <label for="guests"
+        >Guests
+        <input type="number" name="guests" id="guests" />
+      </label>
+      <label for="tables"
+        >Tables
+        <input type="number" name="tables" id="tables" />
+      </label>
+      <button type="submit">Create Event</button>
+    </form>
+  </body>
+</html>
