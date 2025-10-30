@@ -7,16 +7,16 @@ const router = express.Router();
 router
   .route("/")
   .get(async (req, res) => {
-    const collection = await db.collection("events");
+    const collection = await db.collection("events"); //same for partners and payments ex: "partners, payments"
     const result = await collection.find({}).toArray();
 
     res.json(result);
   })
   .post(async (req, res) => {
     console.log(req.body);
-    const { description, guests, tables, type } = req.body;
+    const { description, guests, tables, type } = req.body; // replace with username email password (partners) (make unique for payments)
     //creating variables for guests tables type to store the data
-    if (description && guest && tables && type) {
+    if (description && guests && tables && type) {
       //checking if values are valid
       const collection = await db.collection("events");
       let result = await collection.insertOne({
@@ -40,32 +40,37 @@ router
     const collection = await db.collection("events");
     let query = { _id: new ObjectId(req.params.id) };
     let result = await collection.findOne(query);
-    if (event) res.json(event);
+    if (result) res.json(result);
     else next({ status: 404, message: "event not found" });
   })
   .patch(async (req, res, next) => {
-    const collection = await db.collection("events");
-    const event = events.find((l, i) => {
-      if (l.id == req.params.id) {
-        for (const key in req.body) {
-          events[i][key] = req.body[key];
-        }
-        return true;
-      }
-    });
-    if (event) res.json(event);
-    else next({ status: 404, message: "event not found" });
+  let collection = await db.collection("events");
+  const { guests, tables, type } = req.body;
+  const newBody ={}
+  //to update and validate guests
+  if (guests){
+    newBody.guests = guests 
+  }
+  if (tables){
+    newBody.tables = tables 
+  }
+  if (type){
+    newBody.type = type 
+  }
+  console.log(newBody)
+  let query = { _id: new ObjectId(req.params.id) };
+
+  let result = await collection.updateOne(query, {$set: newBody});
+
+  if (!result) res.send("Not found").status(404);
+  else res.send(result).status(200);
   })
   .delete(async (req, res, next) => {
-    const collection = await db.collection("events");
-    const event = events.find((l, i) => {
-      if (l.id == req.params.id) {
-        events.splice(i, 1);
-        return true;
-      }
-    });
+    let collection = await db.collection("events");
+    let query = { _id: new ObjectId(req.params.id) };
+    let result = await collection.deleteOne(query);
 
-    if (event) res.json(event);
-    else next({ status: 404, message: "event not found" });
+    if (!result) res.send("Not found").status(404);
+    else res.send(result).status(200);
   });
 export default router;
