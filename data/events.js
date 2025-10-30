@@ -1,6 +1,8 @@
+import { ObjectId } from "mongodb";
+
 const events = [
   {
-   // id: 1,
+    _id: new ObjectId("6902a7cbaeca2bf411175a40"),
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada massa ac odio euismod, vel convallis mauris placerat. Vestibulum ante.",
     guests: 250,
@@ -8,31 +10,31 @@ const events = [
     type: "Birthday"
   },
   {
-   // id: 1,
+    _id: new ObjectId("6902a7cbaeca2bf411175a41"),
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada massa ac odio euismod, vel convallis mauris placerat. Vestibulum ante.",
     guests: 500,
-    tables: 125,
+    tables: 250,
     type: "Birthday"
   },
   {
-  //  id: 1,
+   _id: new ObjectId("6902a7cbaeca2bf411175a42"),
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada massa ac odio euismod, vel convallis mauris placerat. Vestibulum ante.",
     guests: 750,
-    tables: 125,
+    tables: 375,
     type: "Birthday"
   },
   {
-   // id: 1,
+   _id: new ObjectId("6902a7cbaeca2bf411175a43"),
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada massa ac odio euismod, vel convallis mauris placerat. Vestibulum ante.",
     guests: 1000,
-    tables: 125,
+    tables: 500,
     type: "Birthday"
   },
   {
-    //id: 2,
+    _id: new ObjectId("6902a7cbaeca2bf411175a44"),
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada massa ac odio euismod, vel convallis mauris placerat. Vestibulum ante.",
     guests: 500,
@@ -40,23 +42,23 @@ const events = [
     type: "Wedding"
   },
   {
-  //  id: 2,
+ _id: new ObjectId("6902a7cbaeca2bf411175a45"),
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada massa ac odio euismod, vel convallis mauris placerat. Vestibulum ante.",
     guests: 1000,
-    tables: 250,
+    tables: 500,
     type: "Wedding"
   },
   {
-   // id: 2,
+    _id: new ObjectId("6902a7cbaeca2bf411175a46"),
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada massa ac odio euismod, vel convallis mauris placerat. Vestibulum ante.",
     guests: 5000,
-    tables: 250,
+    tables: 2500,
     type: "Wedding"
   },
   {
-   // id: 3,
+    _id: new ObjectId("6902a7cbaeca2bf411175a47"),
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada massa ac odio euismod, vel convallis mauris placerat. Vestibulum ante.",
     guests: 1000,
@@ -64,19 +66,19 @@ const events = [
     type: "Concert"
   },
   {
-   // id: 3,
+    _id: new ObjectId("6902a7cbaeca2bf411175a48"),
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada massa ac odio euismod, vel convallis mauris placerat. Vestibulum ante.",
-    guests: 50000,
-    tables: 500,
+    guests: 5000,
+    tables: 2500,
     type: "Concert"
   },
   {
-   // id: 3,
+   _id: new ObjectId("6902a7cbaeca2bf411175a49"),
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada massa ac odio euismod, vel convallis mauris placerat. Vestibulum ante.",
     guests: 10000,
-    tables: 500,
+    tables: 5000,
     type: "Concert"
   },
 ];
