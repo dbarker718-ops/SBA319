@@ -2,19 +2,19 @@ const payments = [
   {
     id: 1,
     user_id: 1,
-    company: "Discover",
+    company: "Capitol one",
     type: "credit",
   },
   {
     id: 2,
     user_id: 2,
-    company: "TD Bank",
+    company: "Bank of america",
     type: "debit",
   },
   {
     id: 3,
     user_id: 3,
-    company: "Master Card",
+    company: "American express",
     type: "credit",
   },
 ];

@@ -1,21 +1,21 @@
 const partners = [
   {
     id: 1,
-    username: "Jack",
-    email: "Jack@gmail.com",
-    password: "jack123",
+    username: "Jim",
+    email: "Jim@gmail.com",
+    password: "jim123",
   },
   {
     id: 2,
-    username: "Bill",
-    email: "Billy@gmail.com",
-    password: "billy123",
+    username: "Bryan",
+    email: "Bryan@gmail.com",
+    password: "bryan123",
   },
   {
     id: 3,
-    username: "Jill",
-    email: "Jill@gmail.com",
-    password: "jill123",
+    username: "Jacky",
+    email: "Jacky@gmail.com",
+    password: "jacky123",
   },
 ];
 
