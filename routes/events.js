@@ -14,7 +14,7 @@ router
   })
   .post(async (req, res) => {
     console.log(req.body);
-    const { description, guests, tables, type } = req.body; // replace with username email password (partners) (make unique for payments)
+    const { description, guests, tables, type } = req.body; //replace with username email password (partners) (make unique for payments)
     //creating variables for guests tables type to store the data
     if (description && guests && tables && type) {
       //checking if values are valid
